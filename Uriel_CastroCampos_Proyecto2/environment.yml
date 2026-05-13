@@ -1,0 +1,13 @@
+name: propedeutico
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - jupyter
+  - spyder
+  - scikit-learn
+prefix: C:\Users\invitadoc5\anaconda3\envs\propedeutico

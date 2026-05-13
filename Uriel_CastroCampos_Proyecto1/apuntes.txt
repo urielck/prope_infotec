@@ -1,0 +1,56 @@
+# ==========================================
+# EJERCICIO 1: Área de un Triángulo
+# ==========================================
+def ejercicio_01():
+    print("\n--- Ejercicio 1 ---")
+    base = float(input("Base: "))
+    # ... resto del código
+
+
+
+# ==========================================
+# EJERCICIO 2: Ecuación 2do Grado
+# ==========================================
+def ejercicio_02():
+    print("\n--- Ejercicio 2 ---")
+    # ... resto del código
+
+
+
+
+
+
+
+
+import cmath
+
+def resolver_ecuacion(a: float, b: float, c: float) -> tuple[complex, complex]:
+    d = b**2 - 4*a*c
+    x1 = (-b + cmath.sqrt(d)) / (2*a)
+    x2 = (-b - cmath.sqrt(d)) / (2*a)
+    return x1, x2
+
+def obtener_valores(mensaje:str) -> float:
+    while True:
+        try:
+            valor = float(input(mensaje))
+            return valor
+        except ValueError:
+            print("Debe ser un número válido")
+
+def main():
+    while True:
+        a = obtener_valores("Ingresa el valor de 'a': ")
+        if a == 0:
+            print("El valor ingresado deve ser distinto de cero")
+        else:
+            break
+
+    b = obtener_valores("Ingresa el valor de 'b': ")
+    c = obtener_valores("Ingresa el valor de 'c': ")
+
+    x1, x2 = resolver_ecuacion(a, b, c)
+
+    print(f"El valor de la ecuación es:\n \tComplejo (+): {x1}\n \tComplejo (-): {x2}")
+if __name__ == "__main__":
+    main()
